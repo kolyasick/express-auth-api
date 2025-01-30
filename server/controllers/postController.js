@@ -1,6 +1,6 @@
 import { validationResult } from "express-validator"
-import postModel from "../models/post-model.js"
-import userModel from "../models/user-model.js"
+import postModel from "../models/PostModel.js"
+import userModel from "../models/UserModel.js"
 import mongoose from "mongoose"
 
 class PostController {

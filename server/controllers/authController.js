@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs"
-import userModel from "../models/user-model.js"
-import activationLinkModel from "../models/activationLink-model.js"
+import userModel from "../models/UserModel.js"
+import activationLinkModel from "../models/ActivationLinkModel.js"
 import tokenController from "./tokenController.js"
 import mailService from "../services/mailService.js"
 import { validationResult } from "express-validator"
@@ -131,7 +131,6 @@ class AuthController {
 			user.isActivated = true
 			await user.save()
 			return res.json({ status: "success", message: "Email successfully activated" })
-			
 		} catch (e) {
 			return res.status(500).json({ message: "Server error" })
 		}
